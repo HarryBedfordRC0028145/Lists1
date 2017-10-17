@@ -15,6 +15,36 @@ namespace Lists1
         public Form1()
         {
             InitializeComponent();
+            List<int> nums = new List<int>();
+            nums.Add(3);
+            nums.Add(5);
+            nums.Add(3);
+            //foreach (int i in nums)
+            //{
+            //    richTextBox1.AppendText(i + ",");
+            //}
+            printNums(nums);
+            nums.Remove(3);
+            printNums(nums);
+            nums.Add(8);
+            foreach (int i in nums)
+            {
+                richTextBox1.AppendText(i + ",");
+            }
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void printNums(List<int> ns)
+        {
+            foreach (int i in ns)
+            {
+                richTextBox1.AppendText(i + ",");
+            }
+            richTextBox1.AppendText("\n==\n");
+        }
+               
     }
 }
